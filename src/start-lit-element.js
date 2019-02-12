@@ -87,6 +87,7 @@ export class StartLitElement extends LitElement {
   constructor() {
     super();
     this._count = 1000;
+    this.start();
   }
 
   onFrame() {
@@ -105,7 +106,6 @@ export class StartLitElement extends LitElement {
 
   render() {
     return html`
-      <button @click="${() => this.start()}">Start</button>
       <recursive-lit-element
         depth="100"
         message="Hello there Im the bottom ${this.count}"
